@@ -51,8 +51,8 @@ public class Spawner : MonoBehaviour
 
             //check if we can spawn in that cell (collider)
             if (spawnTilemap.GetColliderType(cellPosDefault) == Tile.ColliderType.Sprite){
-                int towerCost = TowerCost();
-                if (GameManager.instance.currency.EnoughCurrency(TowerCost())){
+                int towerCost = TowerCost(spawnID);
+                if (GameManager.instance.currency.EnoughCurrency(towerCost)){
                     // use amunt of currency
                     GameManager.instance.currency.Use(towerCost);
 
@@ -71,15 +71,17 @@ public class Spawner : MonoBehaviour
 
     }
 
-    int TowerCost(){
-        switch(spawnID){
-            case 0: return towersPrefabs[0].GetComponent<EnergyTower>().cost;
-            //case 1: return towersPrefabs[1].GetComponent<DamageTower>().cost;
+    public int TowerCost(int id){
+        switch(id){
+            case 2: return towersPrefabs[id].GetComponent<EnergyTower>().cost;
+            case 3: return towersPrefabs[id].GetComponent<TankTower>().cost;
             //case 2: return towersPrefabs[2].GetComponent<SlowTower>().cost;
             
             default: return -1;
         }
     }
+
+    
 
     void SpawnTower(Vector3 position){
         // spawn the tower

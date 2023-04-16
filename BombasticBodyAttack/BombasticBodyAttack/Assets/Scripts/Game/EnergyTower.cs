@@ -58,7 +58,7 @@ public class EnergyTower : MonoBehaviour
     
     //Destroy Tower
     public void Die(){
-        Debug.Log("Tower Destroyed");
+        Debug.Log("Energy Tower Destroyed");
         Destroy(gameObject);
     }
 
