@@ -15,5 +15,15 @@ public class GameManager : MonoBehaviour
     {
         GetComponent<HealthSystem>().Init();
         GetComponent<CurrencySystem>().Init();
+
+        StartCoroutine(WaveStartDelay());
+    }
+
+    IEnumerator WaveStartDelay(){
+        //wait for x seconds
+        yield return new WaitForSeconds(2f);
+        //start enemies spawning
+        EnemySpawner.instance.StartSpawning();
+
     }
 }

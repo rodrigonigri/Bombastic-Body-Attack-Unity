@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner instance;
+    void Awake(){ instance = this; }
+    
     //Enemy prefabs
     public List<GameObject> prefabs;
     //Enemy spawn root points
