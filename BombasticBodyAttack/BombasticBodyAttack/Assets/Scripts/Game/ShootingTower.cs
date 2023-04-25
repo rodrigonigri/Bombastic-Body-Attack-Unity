@@ -36,8 +36,14 @@ public class ShootingTower : MonoBehaviour
     public void ShootItem(){
         //Instantiate the prefab
         GameObject shotItem = Instantiate(prefab_shootItem, transform);
+        //Set its position
+        shotItem.transform.position = transform.position;
+        //Sets its initial position 0.5f above the tower
+        shotItem.transform.position += new Vector3(0.3f,0,0);
+        //Set its scale
+        shotItem.transform.localScale = new Vector3(0.3f,0.3f,1);
         //Set its values
-        //TODO: create shoot item script and set its values
+        shotItem.GetComponent<ShootItem>().Init(damage);
     }
     //Lose Health
     public void LoseHealth(){
