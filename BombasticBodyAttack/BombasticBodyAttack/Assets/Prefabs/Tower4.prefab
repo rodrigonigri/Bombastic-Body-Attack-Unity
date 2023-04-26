@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7316283971885142928}
   - component: {fileID: 4010449234347666571}
   - component: {fileID: 5666741833350316357}
+  - component: {fileID: 6975346858435323929}
   m_Layer: 9
   m_Name: Tower4
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,3 +100,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 8
   cost: 4
+--- !u!61 &6975346858435323929
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472385130321915007}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0035543106, y: 0.0021325946}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.24749029, y: 0.23611605}
+  m_EdgeRadius: 0

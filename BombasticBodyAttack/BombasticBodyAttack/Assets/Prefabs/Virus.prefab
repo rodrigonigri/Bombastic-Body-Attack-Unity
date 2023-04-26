@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -8805125259841155066}
   - component: {fileID: 4370459403725726845}
   - component: {fileID: 4937337660004307311}
+  - component: {fileID: 1884681600628628457}
   m_Layer: 0
   m_Name: Virus
   m_TagString: Enemy
@@ -102,6 +103,8 @@ MonoBehaviour:
   health: 1
   attackPower: 1
   moveSpeed: 0.5
+  animator: {fileID: 4937337660004307311}
+  attackInterval: 2
 --- !u!58 &4370459403725726845
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -138,3 +141,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!50 &1884681600628628457
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7754068695553528161}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

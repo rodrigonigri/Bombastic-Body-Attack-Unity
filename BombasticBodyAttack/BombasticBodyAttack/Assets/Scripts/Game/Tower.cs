@@ -17,11 +17,13 @@ public class Tower : MonoBehaviour
     }
 
     //Lose Health
-    public virtual void LoseHealth(int amount){
+    public virtual bool LoseHealth(int amount){
         health -= amount;
         if (health <= 0){
             Die();
+            return true;
         }
+        return false;
     }
 
     //Destroy Tower
