@@ -2,15 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingTower : MonoBehaviour
+public class ShootingTower : Tower
 {
     //FIELDS
-    //health
-    public int health;
-
-    //cost
-    public int cost;
-
     //damage
     public int damage;
 
@@ -22,8 +16,9 @@ public class ShootingTower : MonoBehaviour
 
     //METHODS
     //Init
-    public void Start(){
+    protected override void Start(){
         //Start shooting interval IEnum
+        Debug.Log("SHOOTING TOWER");
         StartCoroutine(Interval());
     }
     //Interval for shooting
@@ -44,18 +39,5 @@ public class ShootingTower : MonoBehaviour
         shotItem.transform.localScale = new Vector3(0.3f,0.3f,1);
         //Set its values
         shotItem.GetComponent<ShootItem>().Init(damage);
-    }
-    //Lose Health
-    public void LoseHealth(){
-        health --;
-        if (health <= 0){
-            Die();
-        }
-    }
-
-    //Destroy Tower
-    public void Die(){
-        Debug.Log("Shooting Tower Destroyed");
-        Destroy(gameObject);
     }
 }

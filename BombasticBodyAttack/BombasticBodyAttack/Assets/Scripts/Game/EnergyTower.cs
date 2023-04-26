@@ -4,13 +4,9 @@ using UnityEngine;
 
 
 
-public class EnergyTower : MonoBehaviour
+public class EnergyTower : Tower
 {
     //FIELDS
-
-    //Health
-    public int health;
-
     //Income value
     public int incomeValue;
 
@@ -20,12 +16,11 @@ public class EnergyTower : MonoBehaviour
     //Coin Image Object
     public GameObject obj_coin;
 
-    //Cost
-    public int cost;
 
     //METHODS
     //Init 
-    public void Start(){
+    protected override void Start(){
+        Debug.Log("ENERGY TOWER");
         StartCoroutine(Interval()); 
     }
     //Interval IEnumerator
@@ -48,19 +43,6 @@ public class EnergyTower : MonoBehaviour
         obj_coin.SetActive(false);
     }
 
-    //Lose Health
-    public void LoseHealth(){
-        health --;
-        if (health <= 0){
-            Die();
-        }
-    }
-    
-    //Destroy Tower
-    public void Die(){
-        Debug.Log("Energy Tower Destroyed");
-        Destroy(gameObject);
-    }
 
     
 }
