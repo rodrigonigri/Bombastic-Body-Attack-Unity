@@ -104,7 +104,7 @@ MonoBehaviour:
   attackPower: 1
   moveSpeed: 0.5
   animator: {fileID: 4937337660004307311}
-  attackInterval: 2
+  attackInterval: 1
 --- !u!58 &4370459403725726845
 CircleCollider2D:
   m_ObjectHideFlags: 0

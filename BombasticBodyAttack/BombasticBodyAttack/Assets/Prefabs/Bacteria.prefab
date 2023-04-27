@@ -103,6 +103,8 @@ MonoBehaviour:
   health: 2
   attackPower: 2
   moveSpeed: 0.2
+  animator: {fileID: 4647420399478397617}
+  attackInterval: 0
 --- !u!58 &-1725201688647829363
 CircleCollider2D:
   m_ObjectHideFlags: 0

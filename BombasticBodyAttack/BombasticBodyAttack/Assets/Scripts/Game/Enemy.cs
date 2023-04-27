@@ -13,57 +13,36 @@ public class Enemy : MonoBehaviour
     Tower detectedTower;
 
     void Update(){
-        if (!detectedTower){
-            Move();
+        if (detectedTower == null) 
+        {
+             Move();
         }
-        else{
-            
-        }
-        
+    }
+
+    IEnumerator Attack() 
+    {
+        animator.Play("Virus_Attack",0,0);
+        // wait attackinterval
+        yield return new WaitForSeconds(attackInterval);
+        // attack again  
+        attackOrder = StartCoroutine(Attack());
     }
 
     //Moving forward:
     void Move(){
+        animator.Play("Virus_Walking");
         transform.Translate(-transform.right * moveSpeed * Time.deltaTime);
     }
 
-    public void InflictDamge(){
+    public void InflictDamage()
+    {
         bool towerDied = detectedTower.LoseHealth(attackPower);
 
-        if (towerDied){
+        if (towerDied)
+        {
             detectedTower = null;
             StopCoroutine(attackOrder);
-
         }
-    }
-
-    /*
-
-    t_anterior = now() 
-
-
-    Update
-        if colisao:
-            delta_ t = now() - t_anterior // da primeira vez vai ser rápido
-            if delta_t >= 2: // cooldown = 2s
-                t_anterior = now()
-                ataque()
-            else:
-                return
-
-    
-    
-    */
-
-    IEnumerator Attack(){
-        //play animation called "Virus_Attack"
-            
-        animator.Play("Virus_Attack");
-        Debug.Log("Fez a animacao");
-        yield return new WaitForSeconds(attackInterval);
-        Debug.Log("Esperou o tempo");
-        attackOrder = StartCoroutine(Attack());
-        Debug.Log("Chamou a coroutine");
 
     }
 
@@ -83,15 +62,17 @@ public class Enemy : MonoBehaviour
         GetComponent<SpriteRenderer>().color = Color.white;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if(detectedTower){
-            return;
-        }
+    private void OnTriggerEnter2D (Collider2D collision) 
+    {
+        if (detectedTower)
+            return; 
 
-        if (collision.tag == "Tower"){ // fazer um booleano para usarmos em cima no if colisao e criar um trigger out para o booleano voltar a ser falso
-            Debug.Log("Tower detected");
+        if (collision.tag == "Tower")
+        {
             detectedTower = collision.GetComponent<Tower>();
             attackOrder = StartCoroutine(Attack());
         }
     }
+
+    // ontriggerstay
 }
