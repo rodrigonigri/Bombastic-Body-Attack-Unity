@@ -104,7 +104,7 @@ MonoBehaviour:
   attackPower: 2
   moveSpeed: 0.2
   animator: {fileID: 2836018046957432438}
-  attackInterval: 1
+  attackInterval: 5
 --- !u!61 &4230298051062791237
 BoxCollider2D:
   m_ObjectHideFlags: 0

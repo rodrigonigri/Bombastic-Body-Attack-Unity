@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour
 
     public Animator animator;
     public float attackInterval;
+
+    // current time now
+    
     Coroutine attackOrder;
     Tower detectedTower;
 

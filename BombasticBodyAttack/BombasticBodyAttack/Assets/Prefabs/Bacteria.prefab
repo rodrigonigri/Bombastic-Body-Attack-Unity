@@ -100,11 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d813b5980edc44e9120583d51de67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 20
   attackPower: 2
   moveSpeed: 0.2
   animator: {fileID: 4647420399478397617}
-  attackInterval: 1
+  attackInterval: 2
 --- !u!58 &-1725201688647829363
 CircleCollider2D:
   m_ObjectHideFlags: 0

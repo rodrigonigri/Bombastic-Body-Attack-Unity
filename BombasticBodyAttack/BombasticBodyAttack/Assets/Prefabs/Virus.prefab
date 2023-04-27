@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d813b5980edc44e9120583d51de67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 6
   attackPower: 3
-  moveSpeed: 0.5
+  moveSpeed: 0.6
   animator: {fileID: 4937337660004307311}
   attackInterval: 1
 --- !u!58 &4370459403725726845

@@ -26,31 +26,39 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator SpawnDelay()
     {
         // Wait 10 seconds before spawning
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(1f);
         //UI "enemies are coming" message
         Debug.Log("Enemies are coming!");
 
         // Call spawn method
         SpawnEnemy(1, 2);
         // Wait spawn interval
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(25f);
 
         SpawnEnemy(1, 1);
 
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(25f);
 
         SpawnEnemy(1, 2);
         SpawnEnemy(1, 4);
 
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(25f);
 
         SpawnEnemy(1, 0);
         SpawnEnemy(1, 4);
         SpawnEnemy(1, 2);
 
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(25f);
 
         Debug.Log("A big wave of enemies is coming!");
+
+        SpawnEnemy(1, 0);
+        SpawnEnemy(1, 1);
+        SpawnEnemy(1, 2);
+        SpawnEnemy(1, 3);
+        SpawnEnemy(1, 4);
+
+        yield return new WaitForSeconds(5f);
 
         SpawnEnemy(1, 0);
         SpawnEnemy(1, 1);
