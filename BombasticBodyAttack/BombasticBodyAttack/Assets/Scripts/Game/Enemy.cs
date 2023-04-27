@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Attack() 
     {
+        // debug:
+        Debug.Log("Attack");
         animator.Play("Attack",0,0);
         // wait attackinterval
         yield return new WaitForSeconds(attackInterval);
@@ -47,8 +49,8 @@ public class Enemy : MonoBehaviour
     }
 
     //Lose health if hit by a shoot item
-    public void LoseHealth(){
-        health --;
+    public void LoseHealth(int amount){
+        health -= amount;
         StartCoroutine(BlinkRed());
         if (health <= 0){
             Destroy(gameObject);
@@ -72,6 +74,18 @@ public class Enemy : MonoBehaviour
             Debug.Log("contato");
             detectedTower = collision.GetComponent<Tower>();
             attackOrder = StartCoroutine(Attack());
+        }
+        if (collision.tag == "EnemyOut")
+        {
+            Debug.Log("Out");
+            // Destroy enemy
+            Destroy(gameObject);
+
+            // Call function loose health from file HealthSystem.cs
+            FindObjectOfType<HealthSystem>().LoseHealth();
+            
+
+            
         }
     }
 

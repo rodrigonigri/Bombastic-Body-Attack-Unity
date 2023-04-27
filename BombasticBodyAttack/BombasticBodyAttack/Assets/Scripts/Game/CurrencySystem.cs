@@ -21,6 +21,7 @@ public class CurrencySystem : MonoBehaviour
     public void Init(){
         currency = defaultCurrency;
         txt_Currency.text = currency.ToString();
+        StartCoroutine(IncreaseCurrency());
     }
     //Gain currency (input value)
     public void Gain(int val){
@@ -56,5 +57,12 @@ public class CurrencySystem : MonoBehaviour
 
     public void USE_TEST(){
         Debug.Log(Use(3));
+    }
+
+    //create IEnumerator that time to time increase the currency
+    IEnumerator IncreaseCurrency(){
+        yield return new WaitForSeconds(10f);
+        Gain(1);
+        StartCoroutine(IncreaseCurrency());
     }
 }

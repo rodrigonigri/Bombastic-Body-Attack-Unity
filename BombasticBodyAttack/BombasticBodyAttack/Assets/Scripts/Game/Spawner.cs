@@ -21,6 +21,9 @@ public class Spawner : MonoBehaviour
     // Spawnpoints Tilemap
     public Tilemap spawnTilemap;
 
+    //Tile position
+    private Vector3Int tilePos;
+
     void Update(){
         if (CanSpawn()){
             DetectSpawnPoint();
@@ -57,7 +60,7 @@ public class Spawner : MonoBehaviour
                     GameManager.instance.currency.Use(towerCost);
 
                     // spawn the tower
-                    SpawnTower(cellPosCentered);
+                    SpawnTower(cellPosCentered, cellPosDefault);
 
                     // disable the collider
                     spawnTilemap.SetColliderType(cellPosDefault, Tile.ColliderType.None);
@@ -76,6 +79,7 @@ public class Spawner : MonoBehaviour
             case 2: return towersPrefabs[id].GetComponent<EnergyTower>().cost;
             case 3: return towersPrefabs[id].GetComponent<TankTower>().cost;
             case 0: return towersPrefabs[id].GetComponent<ShootingTower>().cost;
+            case 1: return towersPrefabs[id].GetComponent<MultipleShootingTower>().cost;
             
             default: return -1;
         }
@@ -83,15 +87,21 @@ public class Spawner : MonoBehaviour
 
     
 
-    void SpawnTower(Vector3 position){
+    void SpawnTower(Vector3 position, Vector3Int cellPosition){
         // spawn the tower
         GameObject tower = Instantiate(towersPrefabs[spawnID], spawnTowerRoot);
-        tower.transform.position = position;        
+        tower.transform.position = position;
+        tower.GetComponent<Tower>().Init(cellPosition);     
 
         DeselectTowers();
 
         // set the parent of the tower to the spawner
         tower.transform.SetParent(transform);
+    }
+
+    public void RevertCellState(Vector3Int pos)
+    {
+        spawnTilemap.SetColliderType(pos, Tile.ColliderType.Sprite);
     }
 
 

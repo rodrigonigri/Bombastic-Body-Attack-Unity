@@ -100,11 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d813b5980edc44e9120583d51de67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 6
+  health: 12
   attackPower: 2
   moveSpeed: 0.2
   animator: {fileID: 2836018046957432438}
-  attackInterval: 0
+  attackInterval: 1
 --- !u!61 &4230298051062791237
 BoxCollider2D:
   m_ObjectHideFlags: 0

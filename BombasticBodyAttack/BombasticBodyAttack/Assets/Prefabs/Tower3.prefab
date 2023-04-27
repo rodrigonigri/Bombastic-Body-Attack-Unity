@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  cost: 5
-  incomeValue: 4
-  interval: 5
+  cost: 3
+  incomeValue: 2
+  interval: 10
   obj_coin: {fileID: 7075549831829499864}
 --- !u!61 &-3308288319633144338
 BoxCollider2D:

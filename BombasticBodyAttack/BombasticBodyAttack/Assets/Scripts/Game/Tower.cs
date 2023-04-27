@@ -10,15 +10,22 @@ public class Tower : MonoBehaviour
 
     //Cost
     public int cost;
+    private Vector3Int cellPosition;
 
     //METHODS
     protected virtual void Start() {
         Debug.Log("BASE TOWER");
     }
 
+    public virtual void Init(Vector3Int cellPos)
+    {
+        cellPosition = cellPos;
+    }
+
     //Lose Health
     public virtual bool LoseHealth(int amount){
         health -= amount;
+        StartCoroutine(BlinkRed());
         if (health <= 0){
             Die();
             return true;
@@ -29,6 +36,14 @@ public class Tower : MonoBehaviour
     //Destroy Tower
     protected virtual void Die(){
         Debug.Log("Tower Destroyed");
+        FindObjectOfType<Spawner>().RevertCellState(cellPosition);
         Destroy(gameObject);
+    }
+
+
+IEnumerator BlinkRed(){
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }
