@@ -14,6 +14,8 @@ public class EnemySpawner : MonoBehaviour
     // Enemy spawn interval
     public float spawnInterval=2f;
 
+    public int numero = 1;
+
     public void StartSpawning()
     {
         // Call the spawn routine
@@ -25,58 +27,363 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnDelay()
     {
-        // Wait 10 seconds before spawning
-        yield return new WaitForSeconds(1f);
-        //UI "enemies are coming" message
-        Debug.Log("Enemies are coming!");
 
-        // Call spawn method
-        SpawnEnemy(1, 2);
-        // Wait spawn interval
-        yield return new WaitForSeconds(25f);
+        if(numero == 1){
+            //////////////////////////////////////////// FASE 1 ////////////////////////////////////////////
 
-        SpawnEnemy(1, 1);
+            // Wait 10 seconds before spawning
+            yield return new WaitForSeconds(15f);
+            //UI "enemies are coming" message
+            Debug.Log("Enemies are coming!");
 
-        yield return new WaitForSeconds(25f);
+            // Call spawn method
+            SpawnEnemy(1, 2);
+            // Wait spawn interval
+            yield return new WaitForSeconds(25f);
 
-        SpawnEnemy(1, 2);
-        SpawnEnemy(1, 4);
+            SpawnEnemy(1, 1);
 
-        yield return new WaitForSeconds(25f);
+            yield return new WaitForSeconds(25f);
 
-        SpawnEnemy(1, 0);
-        SpawnEnemy(1, 4);
-        SpawnEnemy(1, 2);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 4);
 
-        yield return new WaitForSeconds(25f);
+            yield return new WaitForSeconds(25f);
 
-        Debug.Log("A big wave of enemies is coming!");
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 4);
+            SpawnEnemy(1, 2);
 
-        SpawnEnemy(1, 0);
-        SpawnEnemy(1, 1);
-        SpawnEnemy(1, 2);
-        SpawnEnemy(1, 3);
-        SpawnEnemy(1, 4);
+            yield return new WaitForSeconds(25f);
 
-        yield return new WaitForSeconds(5f);
+            Debug.Log("A big wave of enemies is coming!");
 
-        SpawnEnemy(1, 0);
-        SpawnEnemy(1, 1);
-        SpawnEnemy(1, 2);
-        SpawnEnemy(1, 3);
-        SpawnEnemy(1, 4);
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
 
-        yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(5f);
 
-        SpawnEnemy(1, 0);
-        SpawnEnemy(1, 1);
-        SpawnEnemy(1, 2);
-        SpawnEnemy(1, 3);
-        SpawnEnemy(1, 4);
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(5f);
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(15f);
+
+            Debug.Log("A final wave of enemies is coming!");
+            
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(3f);
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(3f);
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(3f);
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);	
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(3f);
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(3f);
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(3f);
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+        }
+        else if (numero == 2){
+            //////////////////////////////////////////// FASE 2 ////////////////////////////////////////////
+
+            // Wait 10 seconds before spawning
+            yield return new WaitForSeconds(25f);
+            //UI "enemies are coming" message
+            Debug.Log("Enemies are coming!");
+
+            // Call spawn method
+            SpawnEnemy(2, 2);
+            // Wait spawn interval
+            yield return new WaitForSeconds(25f);
+
+            SpawnEnemy(2, 1);
+
+            yield return new WaitForSeconds(25f);
+
+            SpawnEnemy(2, 2);
+            SpawnEnemy(2, 4);
+
+            yield return new WaitForSeconds(25f);
+
+            SpawnEnemy(2, 0);
+            SpawnEnemy(2, 4);
+            SpawnEnemy(2, 2);
+
+            yield return new WaitForSeconds(25f);
+
+            Debug.Log("A big wave of enemies is coming!");
+
+            SpawnEnemy(2, 0);
+            SpawnEnemy(2, 1);
+            SpawnEnemy(2, 2);
+            SpawnEnemy(2, 3);
+            SpawnEnemy(2, 4);
+
+            yield return new WaitForSeconds(5f);
+
+            SpawnEnemy(2, 0);
+            SpawnEnemy(2, 1);
+            SpawnEnemy(2, 2);
+            SpawnEnemy(2, 3);
+            SpawnEnemy(2, 4);
+
+            yield return new WaitForSeconds(5f);
+
+            SpawnEnemy(2, 0);
+            SpawnEnemy(2, 1);
+            SpawnEnemy(2, 2);
+            SpawnEnemy(2, 3);
+            SpawnEnemy(2, 4);
+
+            yield return new WaitForSeconds(15f);
+
+            Debug.Log("A final wave of enemies is coming!");
+
+            SpawnEnemy(2, 0);
+            SpawnEnemy(2, 1);
+            SpawnEnemy(2, 2);
+            SpawnEnemy(2, 3);
+            SpawnEnemy(2, 4);
+
+            yield return new WaitForSeconds(3f);
+
+            SpawnEnemy(2, 0);
+            SpawnEnemy(2, 1);
+            SpawnEnemy(2, 2);
+            SpawnEnemy(2, 3);
+            SpawnEnemy(2, 4);
+
+            yield return new WaitForSeconds(3f);
+
+            SpawnEnemy(2, 0);
+            SpawnEnemy(2, 1);
+            SpawnEnemy(2, 2);
+            SpawnEnemy(2, 3);
+            SpawnEnemy(2, 4);
+        }
+
+        else if (numero == 3){
+            //////////////////////////////////////////// FASE 3 ////////////////////////////////////////////
+
+            // Wait 10 seconds before spawning
+            yield return new WaitForSeconds(20f);
+            //UI "enemies are coming" message
+            Debug.Log("Enemies are coming!");
+
+            // Call spawn method
+            SpawnEnemy(0, 2);
+            // Wait spawn interval
+            yield return new WaitForSeconds(25f);
+
+            SpawnEnemy(0, 1);
+
+            yield return new WaitForSeconds(25f);
+
+            SpawnEnemy(0, 2);
+            SpawnEnemy(0, 4);
+
+            yield return new WaitForSeconds(25f);
+
+            SpawnEnemy(0, 0);
+            SpawnEnemy(0, 4);
+            SpawnEnemy(0, 2);
+
+            yield return new WaitForSeconds(25f);
+
+            Debug.Log("A big wave of enemies is coming!");
+
+            SpawnEnemy(0, 0);
+            SpawnEnemy(0, 1);
+            SpawnEnemy(0, 2);
+            SpawnEnemy(0, 3);
+            SpawnEnemy(0, 4);
+
+            yield return new WaitForSeconds(5f);
+
+            SpawnEnemy(0, 0);
+            SpawnEnemy(0, 1);
+            SpawnEnemy(0, 2);
+            SpawnEnemy(0, 3);
+            SpawnEnemy(0, 4);
+
+            yield return new WaitForSeconds(5f);
+
+            SpawnEnemy(0, 0);
+            SpawnEnemy(0, 1);
+            SpawnEnemy(0, 2);
+            SpawnEnemy(0, 3);
+            SpawnEnemy(0, 4);
+
+            yield return new WaitForSeconds(15f);
+
+            Debug.Log("A final wave of enemies is coming!");
+
+            SpawnEnemy(0, 0);
+            SpawnEnemy(0, 1);
+            SpawnEnemy(0, 2);
+            SpawnEnemy(0, 3);
+            SpawnEnemy(0, 4);
+
+            yield return new WaitForSeconds(3f);
+
+            SpawnEnemy(0, 0);
+            SpawnEnemy(0, 1);
+            SpawnEnemy(0, 2);
+            SpawnEnemy(0, 3);
+            SpawnEnemy(0, 4);
+            yield return new WaitForSeconds(3f);
+
+            SpawnEnemy(0, 0);
+            SpawnEnemy(0, 1);
+            SpawnEnemy(0, 2);
+            SpawnEnemy(0, 3);
+            SpawnEnemy(0, 4);
+        }
+        else if (numero == 4){
+            //////////////////////////////////////////// FASE 4 ////////////////////////////////////////////
+
+            // Wait 10 seconds before spawning
+            yield return new WaitForSeconds(15f);
+            //UI "enemies are coming" message
+            Debug.Log("Enemies are coming!");
+
+            // Call spawn method
+            SpawnEnemy(1, 2);
+            // Wait spawn interval
+            yield return new WaitForSeconds(25f);
+
+            SpawnEnemy(1, 1);
+
+            yield return new WaitForSeconds(25f);
+
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(25f);
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 4);
+            SpawnEnemy(1, 2);
+
+            yield return new WaitForSeconds(25f);
+
+            Debug.Log("A big wave of enemies is coming!");
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(5f);
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(5f);
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(15f);
+
+            Debug.Log("A final wave of enemies is coming!");
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(3f);
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+
+            yield return new WaitForSeconds(3f);
+
+            SpawnEnemy(1, 0);
+            SpawnEnemy(1, 1);
+            SpawnEnemy(1, 2);
+            SpawnEnemy(1, 3);
+            SpawnEnemy(1, 4);
+        }
+
+        
+
+        
+
+
+
+
 
 
         // Recall the same coroutine
-        StartCoroutine(SpawnDelay());
+        //StartCoroutine(SpawnDelay());
     }
 
     void SpawnEnemy(int randomPrefabID, int randomSpawnPointID)

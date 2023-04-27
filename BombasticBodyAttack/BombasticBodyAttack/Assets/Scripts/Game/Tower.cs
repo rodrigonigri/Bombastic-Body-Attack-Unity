@@ -27,8 +27,12 @@ public class Tower : MonoBehaviour
         health -= amount;
         StartCoroutine(BlinkRed());
         if (health <= 0){
-            Die();
-            return true;
+            // verify if object is not null
+            if (gameObject != null){
+                Die();
+                return true;
+            }
+            
         }
         return false;
     }
