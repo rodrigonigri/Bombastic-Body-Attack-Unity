@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Attack() 
     {
-        animator.Play("Virus_Attack",0,0);
+        animator.Play("Attack",0,0);
         // wait attackinterval
         yield return new WaitForSeconds(attackInterval);
         // attack again  
@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
 
     //Moving forward:
     void Move(){
-        animator.Play("Virus_Walking");
+        animator.Play("Walking");
         transform.Translate(-transform.right * moveSpeed * Time.deltaTime);
     }
 
@@ -69,6 +69,7 @@ public class Enemy : MonoBehaviour
 
         if (collision.tag == "Tower")
         {
+            Debug.Log("contato");
             detectedTower = collision.GetComponent<Tower>();
             attackOrder = StartCoroutine(Attack());
         }

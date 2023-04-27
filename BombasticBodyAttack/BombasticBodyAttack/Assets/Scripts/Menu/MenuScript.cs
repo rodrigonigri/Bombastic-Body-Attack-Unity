@@ -5,8 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-    public void ChangeScene(string sceneName)
+    public void PlayGame(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Quitted");
+    }
+
+    public void GoToOptions ()
+    {
+        SceneManager.LoadScene("Options");
     }
 }
