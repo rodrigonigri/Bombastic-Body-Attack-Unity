@@ -56,6 +56,7 @@ public class Enemy : MonoBehaviour
         health -= amount;
         StartCoroutine(BlinkRed());
         if (health <= 0){
+            AudioManager.instance.Play("EnemyDies");
             Destroy(gameObject);
         }
 

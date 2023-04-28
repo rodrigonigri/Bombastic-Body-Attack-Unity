@@ -42,6 +42,7 @@ public class HealthSystem : MonoBehaviour
             Debug.Log("You Lose");
             // Call reset values and stop the game from the manager
             SceneManager.LoadScene("GameOver");
+            AudioManager.instance.Play("GameOver");
         }
         
     }

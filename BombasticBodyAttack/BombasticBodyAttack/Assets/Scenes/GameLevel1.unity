@@ -2808,7 +2808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15, y: 0.85}
   m_AnchorMax: {x: 0.4, y: 1}
-  m_AnchoredPosition: {x: -77.05002, y: -3}
+  m_AnchoredPosition: {x: -77.05004, y: -3}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1210503860
@@ -3534,6 +3534,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382842550}
   m_CullTransparentMesh: 1
+--- !u!1 &1412056670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1412056672}
+  - component: {fileID: 1412056671}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1412056671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412056670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85527f8e7538db549b65cf03d0d43e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 0bcc08b52377c9148960ac555f12a01e, type: 3}
+    mixer: {fileID: 0}
+    volume: 0.713
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDies
+    clip: {fileID: 8300000, guid: b1eaf5cd31ace6f4a9462202fb8f4005, type: 3}
+    mixer: {fileID: 0}
+    volume: 0.608
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlacesTower
+    clip: {fileID: 8300000, guid: da6d0b7c72335f0479f22812cf00659d, type: 3}
+    mixer: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TowerAttacks
+    clip: {fileID: 8300000, guid: e11eaebdd17331c4dad10036feda0373, type: 3}
+    mixer: {fileID: 0}
+    volume: 0.05
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &1412056672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412056670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1414765381
 GameObject:
   m_ObjectHideFlags: 0

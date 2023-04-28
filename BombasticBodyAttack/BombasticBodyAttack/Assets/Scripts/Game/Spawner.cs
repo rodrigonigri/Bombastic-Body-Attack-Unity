@@ -61,6 +61,7 @@ public class Spawner : MonoBehaviour
 
                     // spawn the tower
                     SpawnTower(cellPosCentered, cellPosDefault);
+                    AudioManager.instance.Play("PlacesTower");
 
                     // disable the collider
                     spawnTilemap.SetColliderType(cellPosDefault, Tile.ColliderType.None);

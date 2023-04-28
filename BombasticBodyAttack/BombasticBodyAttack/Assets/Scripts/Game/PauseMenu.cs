@@ -26,5 +26,6 @@ public class PauseMenu : MonoBehaviour
     public void Home(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        AudioListener.volume = 1;
     }
 }

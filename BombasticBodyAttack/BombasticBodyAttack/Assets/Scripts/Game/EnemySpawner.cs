@@ -366,9 +366,11 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemy(0, 2);
             SpawnEnemy(0, 3);
             SpawnEnemy(0, 4);
+
+            flag3 = true;
         }
     
-        flag3 = true;
+        
 
 
         // Recall the same coroutine
