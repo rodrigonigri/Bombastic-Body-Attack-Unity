@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
     public Tilemap spawnTilemap;
 
     //Tile position
-    private Vector3Int tilePos;
+    public Vector3Int tilePos;
 
     void Update(){
         if (CanSpawn()){
@@ -80,6 +80,7 @@ public class Spawner : MonoBehaviour
             case 3: return towersPrefabs[id].GetComponent<TankTower>().cost;
             case 0: return towersPrefabs[id].GetComponent<ShootingTower>().cost;
             case 1: return towersPrefabs[id].GetComponent<MultipleShootingTower>().cost;
+            case 4: return towersPrefabs[id].GetComponent<ExplosiveTower>().cost;
             
             default: return -1;
         }

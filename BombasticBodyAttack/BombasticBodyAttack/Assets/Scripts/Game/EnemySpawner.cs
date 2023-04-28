@@ -142,7 +142,7 @@ public class EnemySpawner : MonoBehaviour
             //////////////////////////////////////////// FASE 2 ////////////////////////////////////////////
 
             // Wait 10 seconds before spawning
-            yield return new WaitForSeconds(25f);
+            yield return new WaitForSeconds(2f);
             //UI "enemies are coming" message
             Debug.Log("Enemies are coming!");
 
