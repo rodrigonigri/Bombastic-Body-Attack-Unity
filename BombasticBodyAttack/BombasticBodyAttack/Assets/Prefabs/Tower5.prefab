@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f895322d770c4d4488310ca2b7a1cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 100
   cost: 3
   damage: 20
 --- !u!61 &6975346858435323929

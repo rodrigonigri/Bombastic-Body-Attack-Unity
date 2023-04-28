@@ -34,6 +34,8 @@ public class ExplosiveTower : Tower
                 yield return new WaitForSeconds(0.5f);
                 collider.GetComponent<Enemy>().LoseHealth(damage);
                 Die();
+                collider.GetComponent<SpriteRenderer>().color = Color.white;
+                GetComponent<SpriteRenderer>().color = Color.white;
 
                 
 

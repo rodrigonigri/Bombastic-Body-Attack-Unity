@@ -44,5 +44,9 @@ public class HealthSystem : MonoBehaviour
         }
         
     }
+
+    public int GetHealthCount(){
+        return healthCount;
+    }
     
 }

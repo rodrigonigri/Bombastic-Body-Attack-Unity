@@ -128,5 +128,15 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    // Create a function that returns the number of enemies alive in the scene:
+    public int EnemiesAlive(){
+        // Get all the enemies in the scene
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        // return the number of enemies
+        return enemies.Length;
+    }
+    
+
 
 }

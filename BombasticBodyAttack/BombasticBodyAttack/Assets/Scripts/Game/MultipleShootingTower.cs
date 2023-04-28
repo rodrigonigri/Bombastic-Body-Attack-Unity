@@ -27,12 +27,18 @@ public class MultipleShootingTower : Tower
         GameObject shotItem2 = Instantiate(prefab_shootItem, transform);
         GameObject shotItem3 = Instantiate(prefab_shootItem, transform);
         GameObject shotItem4 = Instantiate(prefab_shootItem, transform);
+        GameObject shotItem5 = Instantiate(prefab_shootItem, transform);
+        GameObject shotItem6 = Instantiate(prefab_shootItem, transform);
 
 
         //spin 60 degrees shot item 2 and -10 degrees shot item 3
         shotItem2.transform.Rotate(0, 0, 10);
         shotItem3.transform.Rotate(0, 0, -10);
+
+
         shotItem4.transform.Rotate(0, 0, -90);
+        shotItem5.transform.Rotate(0, 0, -100);
+        shotItem6.transform.Rotate(0, 0, -80);
 
 
         
@@ -59,6 +65,16 @@ public class MultipleShootingTower : Tower
         shotItem4.transform.position += new Vector3(-0.5f, 0, 0);
         shotItem4.transform.localScale = new Vector3(0.3f, 0.3f, 1);
         shotItem4.GetComponent<ShootItem>().Init(damage);
+
+        shotItem5.transform.position = transform.position;
+        shotItem5.transform.position += new Vector3(-0.5f, 0, 0);
+        shotItem5.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+        shotItem5.GetComponent<ShootItem>().Init(damage);
+
+        shotItem6.transform.position = transform.position;
+        shotItem6.transform.position += new Vector3(-0.5f, 0, 0);
+        shotItem6.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+        shotItem6.GetComponent<ShootItem>().Init(damage);
 
 
     }
