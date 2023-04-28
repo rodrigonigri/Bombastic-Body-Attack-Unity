@@ -137,6 +137,13 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemy(1, 2);
             SpawnEnemy(1, 3);
             SpawnEnemy(1, 4);
+
+            /*
+
+            if lifes > 0:
+                
+            */
+
         }
         else if (numero == 2){
             //////////////////////////////////////////// FASE 2 ////////////////////////////////////////////

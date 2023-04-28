@@ -2358,8 +2358,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -127.75}
-  m_SizeDelta: {x: -14, y: -255.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -14, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270315550
 MonoBehaviour:
@@ -4226,6 +4226,7 @@ MonoBehaviour:
   - {fileID: 570764812}
   - {fileID: 406689708}
   spawnTilemap: {fileID: 1744027763}
+  tilePos: {x: 0, y: 0, z: 0}
 --- !u!4 &1987230937
 Transform:
   m_ObjectHideFlags: 0
