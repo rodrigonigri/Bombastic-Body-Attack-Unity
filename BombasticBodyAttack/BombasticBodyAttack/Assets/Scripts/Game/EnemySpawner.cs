@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -32,16 +33,20 @@ public class EnemySpawner : MonoBehaviour
         if(flag1){
             if(GameManager.instance.health.GetHealthCount() > 0 && GameManager.instance.spawner.EnemiesAlive() == 0){
                 Debug.Log("You win fase 1!");
+                SceneManager.LoadScene("YouWinLevel1");
+
             }
         }
         if(flag2){
             if(GameManager.instance.health.GetHealthCount() > 0 && GameManager.instance.spawner.EnemiesAlive() == 0){
                 Debug.Log("You win fase 2!");
+                SceneManager.LoadScene("YouWinLevel2");
             }
         }
         if(flag3){
             if(GameManager.instance.health.GetHealthCount() > 0 && GameManager.instance.spawner.EnemiesAlive() == 0){
                 Debug.Log("You win fase 3!");
+                SceneManager.LoadScene("YouWinLevel3");
             }
         }
     }

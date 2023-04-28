@@ -11,6 +11,7 @@ public class Tower : MonoBehaviour
     //Cost
     public int cost;
     private Vector3Int cellPosition;
+    AudioSource source;
 
     //METHODS
     protected virtual void Start() {
@@ -30,6 +31,7 @@ public class Tower : MonoBehaviour
             // verify if object is not null
             if (gameObject != null){
                 Die();
+                source.Play();
                 return true;
             }
             

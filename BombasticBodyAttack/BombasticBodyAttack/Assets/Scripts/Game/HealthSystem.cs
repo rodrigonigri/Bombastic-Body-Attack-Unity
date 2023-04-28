@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -40,7 +41,7 @@ public class HealthSystem : MonoBehaviour
             // lose the game
             Debug.Log("You Lose");
             // Call reset values and stop the game from the manager
-
+            SceneManager.LoadScene("GameOver");
         }
         
     }

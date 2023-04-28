@@ -8,6 +8,13 @@ public class ExplosiveTower : Tower
     //public
     public int damage;
 
+    /* AudioSource source;
+
+    void Awake() {
+        source = GetComponent<AudioSource>();
+    }*/
+
+
     protected override void Start() {
         Debug.Log("EXPLOSIVE TOWER");
     }
@@ -33,13 +40,11 @@ public class ExplosiveTower : Tower
                 collider.GetComponent<SpriteRenderer>().color = Color.red;
                 yield return new WaitForSeconds(0.5f);
                 collider.GetComponent<Enemy>().LoseHealth(damage);
+                //source.Play();
                 Die();
                 collider.GetComponent<SpriteRenderer>().color = Color.white;
                 GetComponent<SpriteRenderer>().color = Color.white;
 
-                
-
-                
             }
         }
         

@@ -30,4 +30,9 @@ public class MusicPlayerScript : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void GoToInstructions()
+    {
+        SceneManager.LoadScene("Instructions1");
+    }
 }
