@@ -2343,6 +2343,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &778536367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 778536369}
+  - component: {fileID: 778536368}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &778536368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778536367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85527f8e7538db549b65cf03d0d43e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 0bcc08b52377c9148960ac555f12a01e, type: 3}
+    mixer: {fileID: 0}
+    volume: 0.713
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDies
+    clip: {fileID: 8300000, guid: b1eaf5cd31ace6f4a9462202fb8f4005, type: 3}
+    mixer: {fileID: 0}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlacesTower
+    clip: {fileID: 8300000, guid: 25a7e1de1f6492a4698fd658b93f73a5, type: 3}
+    mixer: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TowerAttacks
+    clip: {fileID: 8300000, guid: 6587b71f212113d46acc37bcc8952587, type: 3}
+    mixer: {fileID: 0}
+    volume: 0.161
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GainsEnergy
+    clip: {fileID: 8300000, guid: c978154886987bc4e97cd70deb7fec9e, type: 3}
+    mixer: {fileID: 0}
+    volume: 0.154
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &778536369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778536367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1017249398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2751,7 +2831,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15, y: 0.85}
   m_AnchorMax: {x: 0.4, y: 1}
-  m_AnchoredPosition: {x: -77.04999, y: -3}
+  m_AnchoredPosition: {x: -77.05002, y: -3}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1210503860
@@ -3598,7 +3678,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!1 &1574466112
+--- !u!1 &1619415706
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3606,8 +3686,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1574466114}
-  - component: {fileID: 1574466113}
+  - component: {fileID: 1619415708}
+  - component: {fileID: 1619415707}
   m_Layer: 0
   m_Name: GameAudio
   m_TagString: Untagged
@@ -3615,19 +3695,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &1574466113
+--- !u!82 &1619415707
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574466112}
+  m_GameObject: {fileID: 1619415706}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d0673ee5d34ba7b41ba3ed4428d69995, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 95e08346a9a511040b494d17b7673c37, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3711,13 +3791,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &1574466114
+--- !u!4 &1619415708
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574466112}
+  m_GameObject: {fileID: 1619415706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.08702043, y: -0.15100427, z: -9.128468}
   m_LocalScale: {x: 1, y: 1, z: 1}

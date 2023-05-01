@@ -39,5 +39,6 @@ public class ShootingTower : Tower
         shotItem.transform.localScale = new Vector3(0.3f,0.3f,1);
         //Set its values
         shotItem.GetComponent<ShootItem>().Init(damage);
+        AudioManager.instance.Play("TowerAttacks");
     }
 }

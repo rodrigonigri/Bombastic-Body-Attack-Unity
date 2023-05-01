@@ -34,6 +34,7 @@ public class EnergyTower : Tower
     public void IncreaseIncome(){
         GameManager.instance.currency.Gain(incomeValue);
         StartCoroutine(CoinIndiction());
+        AudioManager.instance.Play("GainsEnergy");
 
     }
     // Show energy indication over the tower for short time (0.5 seconds)
