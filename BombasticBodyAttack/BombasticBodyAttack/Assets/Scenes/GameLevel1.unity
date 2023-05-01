@@ -3466,7 +3466,7 @@ MonoBehaviour:
   - name: TowerAttacks
     clip: {fileID: 8300000, guid: 6587b71f212113d46acc37bcc8952587, type: 3}
     mixer: {fileID: 0}
-    volume: 0.25
+    volume: 0.072
     pitch: 1
     loop: 0
     source: {fileID: 0}
